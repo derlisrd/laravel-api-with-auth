@@ -81,6 +81,14 @@ class AuthController extends Controller
     }
 
 
+    public function destroy(Request $r){
+        $r->user()->currentAccessToken()->delete();
+
+        return response()->json([
+            'success'=>true,
+            'message'=>$r->user()
+        ]);
+    }
 
 
 

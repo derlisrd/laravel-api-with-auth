@@ -7,7 +7,7 @@ Route::middleware(['auth:sanctum'])->group(function(){
 
     Route::post('/auth/check',[AuthController::class,'check']);
     Route::post('/auth/logout',[AuthController::class,'logout']);
-
+    Route::delete('/auth/delete',[AuthController::class,'delete']);
 });
 
 
